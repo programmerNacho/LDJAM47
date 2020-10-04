@@ -40,6 +40,7 @@ public class EnemyMind : Damager
 
     private void Start()
     {
+        objective = FindObjectOfType<PlayerMovement>().GetComponent<Health>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.stoppingDistance = distanceToAttack - 0.5f;
         currentState = Type.Chasing;

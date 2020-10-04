@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
+        target = FindObjectOfType<PlayerMovement>().transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
         health = GetComponent<Health>();
         health.OnSurvive.AddListener(OnSurvive);
