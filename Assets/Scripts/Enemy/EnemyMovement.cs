@@ -42,7 +42,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if(navMeshAgent.enabled)
         {
-            navMeshAgent.velocity /= navMeshAgent.velocity.magnitude;
+            navMeshAgent.velocity = Vector3.zero;
         }
     }
 }
